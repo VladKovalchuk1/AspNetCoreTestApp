@@ -1,0 +1,21 @@
+﻿@model IEnumerable<asp_mvc_app.Models.Phone>;
+@{
+    ViewData["Title"] = "Product List";
+}
+<h3>SmartPhone</h3>
+<table class="table-condensed">
+    <tr>
+        <td>Model</td>
+        <td>Manufacturer</td>
+        <td>Price</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Company</td>
+            <td>@item.Price</td>
+            <td><a href="~/Home/Buy/@item.Id">Buy</a></td>
+        </tr>
+    }
+</table>
